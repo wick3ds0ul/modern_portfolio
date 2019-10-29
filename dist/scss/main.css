@@ -102,7 +102,7 @@
   height: 250px;
   background: url(../img/pro21.jpg);
   border-radius: 50%;
-  border: solid 3px #b90bd8;
+  border: solid 3px #eece1a;
 }
 
 .menu .nav-item {
@@ -118,7 +118,7 @@
 }
 
 .menu .nav-item.current > a {
-  color: #b90bd8;
+  color: #eece1a;
 }
 
 .menu .nav-link {
@@ -135,7 +135,7 @@
 }
 
 .menu .nav-link:hover {
-  color: #b90bd8;
+  color: #eece1a;
 }
 
 .nav-item:nth-child(1) {
@@ -222,7 +222,7 @@ header {
 }
 
 .text-secondary {
-  color: #b90bd8;
+  color: #eece1a;
 }
 
 main {
@@ -239,7 +239,7 @@ main .icons a {
 }
 
 main .icons a:hover {
-  color: #b90bd8;
+  color: #eece1a;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -265,13 +265,13 @@ main#home i {
       grid-template-columns: repeat(3, 1fr);
 }
 
-.about-info .bio-img {
+.about-info .bio-image {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: bioimage;
   margin: auto;
-  border-radius: 50%;
-  border: #b90bd8 3px solid;
+  border-radius: 5%;
+  border: #eece1a 3px solid;
 }
 
 .about-info .bio {
@@ -285,7 +285,7 @@ main#home i {
 .about-info .job {
   background: #515151;
   padding: 0.5rem;
-  border-bottom: #b90bd8 5px solid;
+  border-bottom: #eece1a 5px solid;
 }
 
 .about-info .job .job-1 {
@@ -311,6 +311,62 @@ main#home i {
   padding: 1rem;
   background: #2b2b2b;
   height: 60px;
+}
+
+.projects {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.7rem;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.projects img {
+  width: 100%;
+  border: 3px #fff solid;
+}
+
+.projects img:hover {
+  opacity: 0.5;
+  border-color: #eece1a;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+}
+
+.btn:hover, .btn-dark:hover, .btn-light:hover {
+  background: #eece1a;
+  color: #000;
+}
+
+.btn-dark {
+  background: black;
+  color: #fff;
+}
+
+.btn-light {
+  background: #c4c4c4;
+  color: #000;
+}
+
+@media screen and (min-width: 1171px) {
+  .pojects {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .pojects {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -356,11 +412,26 @@ main#home i {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .pojects {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
+  main {
+    padding: 2rem;
+  }
+  main #home h1 {
     margin-top: 10vh;
+  }
+  main .lg-heading {
+    margin-top: 1rem;
+    font-size: 5rem;
+  }
+  .pojects {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=main.css.map */
